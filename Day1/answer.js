@@ -1,17 +1,22 @@
 const fs = require('fs');
 
-// Fonction pour calculer la distance totale
-function calculateTotalDistance(left, right) {
-    // Trier les deux listes
-    const sortedLeft = [...left].sort((a, b) => a - b);
-    const sortedRight = [...right].sort((a, b) => a - b);
-
-    // Calculer la distance totale
-    let totalDistance = 0;
-    for (let i = 0; i < sortedLeft.length; i++) {
-        totalDistance += Math.abs(sortedLeft[i] - sortedRight[i]);
+// Fonction pour calculer le score de similarité
+function calculateSimilarityScore(left, right) {
+    // Créer un dictionnaire pour compter les occurrences dans la liste de droite
+    const rightCount = {};
+    for (const num of right) {
+        rightCount[num] = (rightCount[num] || 0) + 1;
     }
-    return totalDistance;
+
+    // Calculer le score de similarité
+    let similarityScore = 0;
+    for (const num of left) {
+        if (rightCount[num]) {
+            similarityScore += num * rightCount[num];
+        }
+    }
+
+    return similarityScore;
 }
 
 // Lire le fichier input.txt
@@ -32,7 +37,7 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
         rightList.push(right);
     }
 
-    // Calculer et afficher le résultat
-    const totalDistance = calculateTotalDistance(leftList, rightList);
-    console.log('Total Distance:', totalDistance);
+    // Calculer et afficher le score de similarité
+    const similarityScore = calculateSimilarityScore(leftList, rightList);
+    console.log('Similarity Score:', similarityScore);
 });
