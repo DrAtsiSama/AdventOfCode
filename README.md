@@ -20,7 +20,7 @@ Ce repository contient mes solutions pour les puzzles de l'édition 2024.
 | 8    | ✅ ⭐⭐         |
 | 9    | ✅ ⭐⭐         |
 | 10   | ✅ ⭐⭐         |
-| 11   | ⬜ En attente   |
+| 11   | ✅ ⭐⭐         |
 | 12   | ⬜ En attente   |
 | 13   | ⬜ En attente   |
 | 14   | ⬜ En attente   |
