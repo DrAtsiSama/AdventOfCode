@@ -1,77 +1,66 @@
-# 🎄 Advent of Code 2024 🎅
+# 🎄 Advent of Code - Archives 🎅
 
-**Advent of Code** est un événement annuel de programmation qui propose une série de puzzles à résoudre chaque jour du 1er au 25 décembre. Chaque jour comprend deux parties, et chaque partie complétée rapporte une étoile. L'objectif est de collecter 50 étoiles avant Noël. 
+Bienvenue dans mon repository dédié à l'**Advent of Code** !  
+L'Advent of Code est un événement annuel de programmation, organisé chaque mois de décembre, qui propose une série de puzzles journaliers pour tester vos compétences en résolution de problèmes et en programmation.
 
-Ce repository contient mes solutions pour les puzzles de l'édition 2024.
+Ce repository contient mes solutions pour différentes éditions, regroupées par année. Chaque édition est une opportunité d'explorer différents langages et approches.
 
 ---
 
-## 📅 Progression des jours
+## 📜 Sommaire des éditions
 
-| Jour | Statut         |
-|------|----------------|
-| 1    | ✅ ⭐⭐         |
-| 2    | ✅ ⭐⭐         |
-| 3    | ✅ ⭐⭐         |
-| 4    | ✅ ⭐⭐         |
-| 5    | ✅ ⭐⭐         |
-| 6    | ✅ ⭐⭐         |
-| 7    | ✅ ⭐⭐         |
-| 8    | ✅ ⭐⭐         |
-| 9    | ✅ ⭐⭐         |
-| 10   | ✅ ⭐⭐         |
-| 11   | ✅ ⭐⭐         |
-| 12   | ✅ ⭐⭐         |
-| 13   | ✅ ⭐⭐         |
-| 14   | ✅ ⭐⭐         |
-| 15   | ✅ ⭐⭐         |
-| 16   | ✅ ⭐⭐         |
-| 17   | ✅ ⭐⭐         |
-| 18   | ✅ ⭐⭐         |
-| 19   | ✅ ⭐⭐         |
-| 20   | ✅ ⭐⭐         |
-| 21   | ✅ ⭐⭐         |
-| 22   | ✅ ⭐⭐         |
-| 23   | ✅ ⭐⭐         |
-| 24   | ✅ ⭐⭐         |
-| 25   | ✅ ⭐⭐         |
-
+| Année | Langage utilisé       | État            |
+|-------|-----------------------|-----------------|
+| 2024  | **JavaScript (Node.js)** | ✅ Complété     |
+| 2023  | //            | ❌ Non terminé     |
+| 2022  | //                | ❌ Non terminé     |
+| 2021  | //              | ❌ Non terminé     |
+| 2020  | //               | ❌ Non terminé  |
+| ...  | **...**               | ❌ Non terminé  |
+❌ Non terminé 🔄 En cours ✅ Complété
 ---
 
 ## 📂 Structure du repository
 
-Chaque jour dispose de son propre répertoire contenant :
-- **Un fichier de solution** : Résolution du puzzle en JavaScript (Node.js).
-- **Un fichier d'entrée** : Les données fournies pour résoudre le problème.
-- **Un fichier d'énoncé** : Le sujet fournies pour ce jour.
+Chaque édition est organisée dans un dossier séparé contenant :
+- Un dossier pour chaque jour avec les solutions, entrées et énoncés.
+- Un README spécifique à chaque année, détaillant ma progression et les particularités de l'édition.
 
 Exemple :
 ```plaintext
 .
-├── Day1
-│   ├── answer.js
-│   ├──  input.txt
-│   └── prompt.md
-├── Day2
-│   ├── answer.js
-│   ├──  input.txt
-│   └── prompt.md
-├── Day . . .
+├── 2024
+│   ├── Day1
+│   ├── Day2
+│   ├── ...
+│   └── README.md
+├── 2023
+│   ├── Day1
+│   ├── Day2
+│   ├── ...
+│   └── README.md
 └── README.md
 ```
 
-## 🚀 Comment exécuter les solutions
+## 🚀 Pourquoi participer ?
+ Apprentissage : Découvrir ou approfondir un langage de programmation.
+    Challenge : Tester ses compétences en résolution de problèmes.
+    Plaisir : S'amuser tout en apprenant.
+## 🛠️ Comment exécuter les solutions ?
+1. Clonez ce repository :
+```
+git clone git@github.com:DrAtsiSama/AdventOfCode.git
+cd AdventOfCode
+```
+2. Naviguez dans le répertoire de l'année souhaitée :
+```
+cd AOC2024
+```
+3. Suivez les instructions spécifiques dans le README de l'année pour exécuter les solutions.
 
-1. **Clonez le repository** :
-   ```bash
-   git clone git@github.com:DrAtsiSama/AdventOfCode2024.git
-   cd ADVENTOFCODE2024
-2. Naviguez dans le répertoire du jour souhaité :
-    ```bash
-    cd Day1
-3. Exécutez la solution avec Node.js :
-    ```bash
-    node answer.js
+---
 ## 🔗 Liens utiles
 - [Site officiel d'Advent of Code](https://adventofcode.com/2024)
 - [Mon portfolio](RemyScherier.fr)
+---
+## 🎉 Merci de votre visite ! 
