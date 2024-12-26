@@ -17,7 +17,7 @@ Ce repository contient mes solutions pour différentes éditions, regroupées pa
 | 2021  | //              | ❌ Non terminé     |
 | 2020  | //               | ❌ Non terminé  |
 | ...  | **...**               | ❌ Non terminé  |
-❌ Non terminé 🔄 En cours ✅ Complété
+❌ Non terminé | 🔄 En cours |  ✅ Complété
 ---
 
 ## 📂 Structure du repository
