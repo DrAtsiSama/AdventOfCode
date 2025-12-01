@@ -11,6 +11,7 @@ Ce repository contient mes solutions pour différentes éditions, regroupées pa
 
 | Année | Langage utilisé       | État            |
 |-------|-----------------------|-----------------|
+| 2024  | **Go** | 🔄 En cours     |
 | 2024  | **JavaScript (Node.js)** | ✅ Complété     |
 | 2023  | //            | ❌ Non terminé     |
 | 2022  | //                | ❌ Non terminé     |
