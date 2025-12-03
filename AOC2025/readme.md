@@ -23,3 +23,11 @@ AOC2025/
    ├─ main.go
    ├─ input.txt
    └─ prompt.md
+
+## 📅 Progression des jours
+
+| Jour | Statut         |
+|------|----------------|
+| 1    | ✅ ⭐⭐         |
+| 2    | ✅ ⭐⭐         |
+| 3    | ✅ ⭐⭐         |
