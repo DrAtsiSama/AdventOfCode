@@ -1,6 +1,6 @@
 # Advent of Code 2025 – Go
 
-Repo perso pour Advent of Code 2025 en Go.
+Advent of Code 2025 en Go.
 
 ## Structure
 
