@@ -1,63 +1,155 @@
---- Day 8: Playground ---
+--- Day 9: Movie Theater ---
 
-Equipped with a new understanding of teleporter maintenance, you confidently step onto the repaired teleporter pad.
+You slide down the firepole in the corner of the playground and land in the North Pole base movie theater!
 
-You rematerialize on an unfamiliar teleporter pad and find yourself in a vast underground space which contains a giant playground!
-
-Across the playground, a group of Elves are working on setting up an ambitious Christmas decoration project. Through careful rigging, they have suspended a large number of small electrical junction boxes.
-
-Their plan is to connect the junction boxes with long strings of lights. Most of the junction boxes don't provide electricity; however, when two junction boxes are connected by a string of lights, electricity can pass between those two junction boxes.
-
-The Elves are trying to figure out which junction boxes to connect so that electricity can reach every junction box. They even have a list of all of the junction boxes' positions in 3D space (your puzzle input).
+The movie theater has a big tile floor with an interesting pattern. Elves here are redecorating the theater by switching out some of the square tiles in the big grid they form. Some of the tiles are red; the Elves would like to find the largest rectangle that uses red tiles for two of its opposite corners. They even have a list of where the red tiles are located in the grid (your puzzle input).
 
 For example:
 
-162,817,812
-57,618,57
-906,360,560
-592,479,940
-352,342,300
-466,668,158
-542,29,236
-431,825,988
-739,650,466
-52,470,668
-216,146,977
-819,987,18
-117,168,530
-805,96,715
-346,949,466
-970,615,88
-941,993,340
-862,61,35
-984,92,344
-425,690,689
+7,1
+11,1
+11,7
+9,7
+9,5
+2,5
+2,3
+7,3
 
-This list describes the position of 20 junction boxes, one per line. Each position is given as X,Y,Z coordinates. So, the first junction box in the list is at X=162, Y=817, Z=812.
+Showing red tiles as # and other tiles as ., the above arrangement of red tiles would look like this:
 
-To save on string lights, the Elves would like to focus on connecting pairs of junction boxes that are as close together as possible according to straight-line distance. In this example, the two junction boxes which are closest together are 162,817,812 and 425,690,689.
+..............
+.......#...#..
+..............
+..#....#......
+..............
+..#......#....
+..............
+.........#.#..
+..............
 
-By connecting these two junction boxes together, because electricity can flow between them, they become part of the same circuit. After connecting them, there is a single circuit which contains two junction boxes, and the remaining 18 junction boxes remain in their own individual circuits.
+You can choose any two red tiles as the opposite corners of your rectangle; your goal is to find the largest rectangle possible.
 
-Now, the two junction boxes which are closest together but aren't already directly connected are 162,817,812 and 431,825,988. After connecting them, since 162,817,812 is already connected to another junction box, there is now a single circuit which contains three junction boxes and an additional 17 circuits which contain one junction box each.
+For example, you could make a rectangle (shown as O) with an area of 24 between 2,5 and 9,7:
 
-The next two junction boxes to connect are 906,360,560 and 805,96,715. After connecting them, there is a circuit containing 3 junction boxes, a circuit containing 2 junction boxes, and 15 circuits which contain one junction box each.
+..............
+.......#...#..
+..............
+..#....#......
+..............
+..OOOOOOOO....
+..OOOOOOOO....
+..OOOOOOOO.#..
+..............
 
-The next two junction boxes are 431,825,988 and 425,690,689. Because these two junction boxes were already in the same circuit, nothing happens!
+Or, you could make a rectangle with area 35 between 7,1 and 11,7:
 
-This process continues for a while, and the Elves are concerned that they don't have enough extension cables for all these circuits. They would like to know how big the circuits will be.
+..............
+.......OOOOO..
+.......OOOOO..
+..#....OOOOO..
+.......OOOOO..
+..#....OOOOO..
+.......OOOOO..
+.......OOOOO..
+..............
 
-After making the ten shortest connections, there are 11 circuits: one circuit which contains 5 junction boxes, one circuit which contains 4 junction boxes, two circuits which contain 2 junction boxes each, and seven circuits which each contain a single junction box. Multiplying together the sizes of the three largest circuits (5, 4, and one of the circuits of size 2) produces 40.
+You could even make a thin rectangle with an area of only 6 between 7,3 and 2,3:
 
-Your list contains many junction boxes; connect together the 1000 pairs of junction boxes which are closest together. Afterward, what do you get if you multiply together the sizes of the three largest circuits?
+..............
+.......#...#..
+..............
+..OOOOOO......
+..............
+..#......#....
+..............
+.........#.#..
+..............
 
-Your puzzle answer was 63920.
+Ultimately, the largest rectangle you can make in this example has area 50. One way to do this is between 2,5 and 11,1:
+
+..............
+..OOOOOOOOOO..
+..OOOOOOOOOO..
+..OOOOOOOOOO..
+..OOOOOOOOOO..
+..OOOOOOOOOO..
+..............
+.........#.#..
+..............
+
+Using two red tiles as opposite corners, what is the largest area of any rectangle you can make?
+
+Your puzzle answer was 4739623064.
 --- Part Two ---
 
-The Elves were right; they definitely don't have enough extension cables. You'll need to keep connecting junction boxes together until they're all in one large circuit.
+The Elves just remembered: they can only switch out tiles that are red or green. So, your rectangle can only include red or green tiles.
 
-Continuing the above example, the first connection which causes all of the junction boxes to form a single circuit is between the junction boxes at 216,146,977 and 117,168,530. The Elves need to know how far those junction boxes are from the wall so they can pick the right extension cable; multiplying the X coordinates of those two junction boxes (216 and 117) produces 25272.
+In your list, every red tile is connected to the red tile before and after it by a straight line of green tiles. The list wraps, so the first red tile is also connected to the last red tile. Tiles that are adjacent in your list will always be on either the same row or the same column.
 
-Continue connecting the closest unconnected pairs of junction boxes together until they're all in the same circuit. What do you get if you multiply together the X coordinates of the last two junction boxes you need to connect?
+Using the same example as before, the tiles marked X would be green:
 
-Your puzzle answer was 1026594680.
+..............
+.......#XXX#..
+.......X...X..
+..#XXXX#...X..
+..X........X..
+..#XXXXXX#.X..
+.........X.X..
+.........#X#..
+..............
+
+In addition, all of the tiles inside this loop of red and green tiles are also green. So, in this example, these are the green tiles:
+
+..............
+.......#XXX#..
+.......XXXXX..
+..#XXXX#XXXX..
+..XXXXXXXXXX..
+..#XXXXXX#XX..
+.........XXX..
+.........#X#..
+..............
+
+The remaining tiles are never red nor green.
+
+The rectangle you choose still must have red tiles in opposite corners, but any other tiles it includes must now be red or green. This significantly limits your options.
+
+For example, you could make a rectangle out of red and green tiles with an area of 15 between 7,3 and 11,1:
+
+..............
+.......OOOOO..
+.......OOOOO..
+..#XXXXOOOOO..
+..XXXXXXXXXX..
+..#XXXXXX#XX..
+.........XXX..
+.........#X#..
+..............
+
+Or, you could make a thin rectangle with an area of 3 between 9,7 and 9,5:
+
+..............
+.......#XXX#..
+.......XXXXX..
+..#XXXX#XXXX..
+..XXXXXXXXXX..
+..#XXXXXXOXX..
+.........OXX..
+.........OX#..
+..............
+
+The largest rectangle you can make in this example using only red and green tiles has area 24. One way to do this is between 9,5 and 2,3:
+
+..............
+.......#XXX#..
+.......XXXXX..
+..OOOOOOOOXX..
+..OOOOOOOOXX..
+..OOOOOOOOXX..
+.........XXX..
+.........#X#..
+..............
+
+Using two red tiles as opposite corners, what is the largest area of any rectangle you can make using only red and green tiles?
+
+Your puzzle answer was 1654141440.
